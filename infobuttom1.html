@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<script language="javascript">
+    function a(obj)
+    {     var _selectedvalue = obj.value;
+        if(_selectedvalue==''){     _selectedvalue = '-1';  }
+        for(i=1;i<=2;i++){
+            var divobj = document.getElementById('tb'+i);
+            if(parseInt(_selectedvalue)==i){       divobj.style.display = 'block';    }
+            else{       divobj.style.display = 'none';
+            }
+        }
+    }
+</script>
+
+
+<head>
+    <link rel="stylesheet" href="ex.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="title">
+    Information audience
+</div>
+
+<select id='selecttb' onchange="a(this)">
+    <!--<option value=''></option>-->
+    <option value='1'>Provider</option>
+    <option value='2'>Patient</option>
+
+
+</select>
+
+<div id="tb1" style='display:block'>
+    <table>
+        <tr>
+            <td class="label">Age</td><td><input id="age" value="64" size="2" name="age"></td>
+        </tr>
+        <tr>
+            <td class="label">Gender</td><td> <input id="gender" value="M" size="2" name="gender"></td>
+        </tr>
+        <tr>
+            <td class="label">Problem list</td><td>
+            <ul>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Angina<a onclick="window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=PROBLISTE&mainSearchCriteria.v.c=I20.9&mainSearchCriteria.v.cs=2.16.840.1.113883.6.90&mainSearchCriteria.v.dn=Angina &patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PROV&informationRecipient.languageCode.c=en&performer=PROV&performer.languageCode.c=en')" > <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td class="label">Procedure</td><td>
+            <ul>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> PCI
+                    <!--<a onclick="window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=PROBLISTREV&mainSearchCriteria.v.c=418285008 &mainSearchCriteria.v.cs=2.16.840.1.113883.6.96&mainSearchCriteria.v.dn=Angioplasty&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PAT&informationRecipient.languageCode.c=en&performer=PAT&performer.languageCode.c=en')" > <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>-->
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td class="label">Medications</td><td>
+            <ul>
+                <li>
+                <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Clopidogrel 300 MG Oral Tablet [Plavix] <a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=MEDOE&mainSearchCriteria.v.c=749198&mainSearchCriteria.v.cs=2.16.840.1.113883.6.88&mainSearchCriteria.v.dn=clopidogrel300MGOralTablet[Plavix]&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PROV&informationRecipient.languageCode.c=en&informationRecipient.healthCareProvider.c.c=200000000X&performer=PROV&performer.languageCode.c=en&performer.healthCareProvider.c.c=200000000X')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Aspirin 81mg oral tablet <a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=MEDOE&mainSearchCriteria.v.c=243670&mainSearchCriteria.v.cs=2.16.840.1.113883.6.88&mainSearchCriteria.v.dn=Aspirin81mgoraltablet&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PROV&informationRecipient.languageCode.c=en&informationRecipient.healthCareProvider.c.c=200000000X&performer=PROV&performer.languageCode.c=en&performer.healthCareProvider.c.c=200000000X')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Simvastatin 40mg oral tablet <a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=MEDOE&mainSearchCriteria.v.c=57132-3&mainSearchCriteria.v.cs=2.16.840.1.113883.6.1&mainSearchCriteria.v.dn=Simvastatin40mgoraltablet&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PROV&informationRecipient.languageCode.c=en&informationRecipient.healthCareProvider.c.c=200000000X&performer=PROV&performer.languageCode.c=en&performer.healthCareProvider.c.c=200000000X')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td class="label">Lab results</td><td>
+            <ul>
+                <li>
+                    CYP2C19 Genotype test result <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font>
+                    <a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=LABRREV&mainSearchCriteria.v.c=57132-3&mainSearchCriteria.v.cs=2.16.840.1.113883.6.1&mainSearchCriteria.v.dn=CYP2C19Genotypetestresult&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&informationRecipient=PROV&informationRecipient.languageCode.c=en&informationRecipient.healthCareProvider.c.c=200000000X&performer=PROV&performer.languageCode.c=en&performer.healthCareProvider.c.c=200000000X')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+    </table>   </div>
+
+
+<div id="tb2" style='display:none'>
+    <table>
+        <tr>
+            <td class="label">Age</td><td><input id="age" value="64" size="2" name="age"></td>
+        </tr>
+        <tr>
+            <td class="label">Gender</td><td> <input id="gender" value="M" size="2" name="gender"></td>
+        </tr>
+        <tr>
+            <td class="label">Problem list</td><td>
+            <ul>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Angina<a onclick="window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=PROBLISTREV&mainSearchCriteria.v.c=I20.9&mainSearchCriteria.v.cs=2.16.840.1.113883.6.90&mainSearchCriteria.v.dn=Angina&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PAT&informationRecipient.languageCode.c=en&performer=PAT&performer.languageCode.c=en')" > <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td class="label">Procedure</td><td>
+            <ul>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> PCI<a onclick="window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=PROBLISTREV&mainSearchCriteria.v.c=418285008 &mainSearchCriteria.v.cs=2.16.840.1.113883.6.96&mainSearchCriteria.v.dn=Angioplasty&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PAT&informationRecipient.languageCode.c=en&performer=PAT&performer.languageCode.c=en')" > <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td class="label">Medications</td><td>
+            <ul>
+                <li>
+                <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Clopidogrel 300 MG Oral Tablet [Plavix] <a href="#" onclick="window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=MLREV&mainSearchCriteria.v.c=749198 &mainSearchCriteria.v.cs=2.16.840.1.113883.6.88&mainSearchCriteria.v.dn=clopidogrel 300 MG Oral Tablet [Plavix] &patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PAT&informationRecipient.languageCode.c=en&performer=PAT&performer.languageCode.c=en');"> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Aspirin 81mg oral tablet <a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=MLREV&mainSearchCriteria.v.c=243670&mainSearchCriteria.v.cs=2.16.840.1.113883.6.88&mainSearchCriteria.v.dn=Aspirin81mgoraltablet&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PAT&informationRecipient.languageCode.c=en&performer=PAT&performer.languageCode.c=en')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+                <li>
+                    <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font> Simvastatin 40mg oral tablet <a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=MEDOE&mainSearchCriteria.v.c=57132-3&mainSearchCriteria.v.cs=2.16.840.1.113883.6.1&mainSearchCriteria.v.dn=Simvastatin%2040mg%20oral%20tablet&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&encounter.c.c=AMB&informationRecipient=PROV&informationRecipient.languageCode.c=en&performer=PAT&performer.languageCode.c=en')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+        <tr>
+            <td class="label">Lab results</td><td>
+            <ul>
+                <li>
+                    CYP2C19 Genotype test result <font style="font-color:red;font-weight:bold;font-size:12pt;font-family:arial"></font>
+                    <!--<a href="#" onclick=window.open('http://service.oib.utah.edu/infobutton-service/infoRequest?representedOrganization.id.root=medicaldecisionmaking.org&taskContext.c.c=LABRREV&mainSearchCriteria.v.c=57132-3&mainSearchCriteria.v.cs=2.16.840.1.113883.6.1&mainSearchCriteria.v.dn=CYP2C19Genotypetestresult&patientPerson.administrativeGenderCode.c=M&age.v.v=64&age.v.u=a&ageGroup.v.c=D000368&informationRecipient=PROV&informationRecipient.languageCode.c=en&informationRecipient.healthCareProvider.c.c=200000000X&performer=PROV&performer.languageCode.c=en&performer.healthCareProvider.c.c=200000000X')> <img title="OpenInfobutton" src="images/infobutton_icon.png"> </a>-->
+                </li>
+
+            </ul>
+        </td>
+        </tr>
+    </table>   </div>
+
+
+
+
+
+</body>
+</html>

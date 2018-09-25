@@ -1,0 +1,12 @@
+body {
+    min-width: 700px;
+    background: #f0f0f0;
+    font: 12px verdana; padding: 0px 75px; margin: 0px;
+}
+
+
+
+table td { color: #001155; line-height: 16px; vertical-align: top; border: 4px solid #fdfdfd; border-width: 0px 4px 4px 0px; padding: 8px;  }
+table li { padding: 3px 0px }
+
+table a img { width:20px; vertical-align: middle; text-decoration: none; padding: 0px 0px 0px 0px; margin:  -12px -0px -12px -5px}
